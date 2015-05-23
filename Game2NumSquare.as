@@ -1,7 +1,7 @@
 ﻿package  {
 	
 	import flash.display.MovieClip;
-	
+	import flash.utils.*;
 	
 	public class Game2NumSquare extends MovieClip {
 		private var _number:int;
@@ -19,8 +19,11 @@
 		public function labelShow():void {
 			addChild(labelNum);
 		}
-		public function labelHide():void {
+		public function remove():void {
 			removeChild(labelNum);
+		}
+		public function labelHide():void {
+			setTimeout(remove, 2000);
 		}
 		public function get clicked():Boolean  {
 			return _clicked;
