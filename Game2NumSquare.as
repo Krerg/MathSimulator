@@ -22,8 +22,8 @@
 		public function remove():void {
 			removeChild(labelNum);
 		}
-		public function labelHide():void {
-			setTimeout(remove, 2000);
+		public function labelHide(time:int):void {
+			setTimeout(remove, time);
 		}
 		public function get clicked():Boolean  {
 			return _clicked;
